@@ -1,5 +1,5 @@
 #修改TNAME: K2P-5.0 中的K2P-5.0为你需要编译的型号，注意名称要与configs/templates/目录下的名字相同
-name: RM2100
+name: Build Padava
 
 on: 
   release:
@@ -100,12 +100,18 @@ jobs:
         echo "CONFIG_FIRMWARE_INCLUDE_SMBD36=n" >> .config
         sed -i '/CONFIG_FIRMWARE_INCLUDE_EAP_PEAP/d' .config
         echo "CONFIG_FIRMWARE_INCLUDE_EAP_PEAP=n" >> .config
+        sed -i '/CONFIG_FIRMWARE_INCLUDE_SFTP/d' .config
+        echo "CONFIG_FIRMWARE_INCLUDE_SFTP=n" >> .config
+        sed -i '/CONFIG_FIRMWARE_INCLUDE_OPENSSH/d' .config
+        echo "CONFIG_FIRMWARE_INCLUDE_OPENSSH=n" >> .config
+        sed -i '/CONFIG_FIRMWARE_INCLUDE_OPENSSL_EC/d' .config
+        echo "CONFIG_FIRMWARE_INCLUDE_OPENSSL_EC=n" >> .config
         sed -i '/CONFIG_FIRMWARE_INCLUDE_XUPNPD/d' .config
         echo "CONFIG_FIRMWARE_INCLUDE_XUPNPD=n" >> .config
-        sed -i '/CONFIG_FIRMWARE_INCLUDE_DOGCOM/d' .config
-        echo "CONFIG_FIRMWARE_INCLUDE_DOGCOM=n" >> .config
         sed -i '/CONFIG_FIRMWARE_INCLUDE_CURL/d' .config
         echo "CONFIG_FIRMWARE_INCLUDE_CURL=n" >> .config
+        sed -i '/CONFIG_FIRMWARE_INCLUDE_DOGCOM/d' .config
+        echo "CONFIG_FIRMWARE_INCLUDE_DOGCOM=n" >> .config
         sed -i '/CONFIG_FIRMWARE_INCLUDE_NAPT66/d' .config
         echo "CONFIG_FIRMWARE_INCLUDE_NAPT66=n" >> .config
         sed -i '/CONFIG_FIRMWARE_INCLUDE_SHADOWSOCKS/d' .config
@@ -118,6 +124,14 @@ jobs:
         echo "CONFIG_FIRMWARE_INCLUDE_TTYD=n" >> .config
         sed -i '/CONFIG_FIRMWARE_INCLUDE_LRZSZ/d' .config
         echo "CONFIG_FIRMWARE_INCLUDE_LRZSZ=n" >> .config
+        sed -i '/CONFIG_FIRMWARE_INCLUDE_HTOP/d' .config
+        echo "CONFIG_FIRMWARE_INCLUDE_HTOP=n" >> .config
+        sed -i '/CONFIG_FIRMWARE_INCLUDE_NANO/d' .config
+        echo "CONFIG_FIRMWARE_INCLUDE_NANO=n" >> .config
+        sed -i '/CONFIG_FIRMWARE_INCLUDE_IPERF3/d' .config
+        echo "CONFIG_FIRMWARE_INCLUDE_IPERF3=n" >> .config
+        sed -i '/CONFIG_FIRMWARE_INCLUDE_MTR/d' .config
+        echo "CONFIG_FIRMWARE_INCLUDE_MTR=n" >> .config
         sed -i '/CONFIG_FIRMWARE_INCLUDE_SOCAT/d' .config
         echo "CONFIG_FIRMWARE_INCLUDE_SOCAT=n" >> .config
         sed -i '/CONFIG_FIRMWARE_INCLUDE_SRELAY/d' .config
