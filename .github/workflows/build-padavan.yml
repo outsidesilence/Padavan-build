@@ -102,14 +102,8 @@ jobs:
         echo "CONFIG_FIRMWARE_INCLUDE_EAP_PEAP=n" >> .config
         sed -i '/CONFIG_FIRMWARE_INCLUDE_SFTP/d' .config
         echo "CONFIG_FIRMWARE_INCLUDE_SFTP=n" >> .config
-        sed -i '/CONFIG_FIRMWARE_INCLUDE_OPENSSH/d' .config
-        echo "CONFIG_FIRMWARE_INCLUDE_OPENSSH=n" >> .config
-        sed -i '/CONFIG_FIRMWARE_INCLUDE_OPENSSL_EC/d' .config
-        echo "CONFIG_FIRMWARE_INCLUDE_OPENSSL_EC=n" >> .config
         sed -i '/CONFIG_FIRMWARE_INCLUDE_XUPNPD/d' .config
         echo "CONFIG_FIRMWARE_INCLUDE_XUPNPD=n" >> .config
-        sed -i '/CONFIG_FIRMWARE_INCLUDE_CURL/d' .config
-        echo "CONFIG_FIRMWARE_INCLUDE_CURL=n" >> .config
         sed -i '/CONFIG_FIRMWARE_INCLUDE_DOGCOM/d' .config
         echo "CONFIG_FIRMWARE_INCLUDE_DOGCOM=n" >> .config
         sed -i '/CONFIG_FIRMWARE_INCLUDE_NAPT66/d' .config
