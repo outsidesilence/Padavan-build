@@ -120,14 +120,8 @@ jobs:
         echo "CONFIG_FIRMWARE_INCLUDE_LRZSZ=n" >> .config
         sed -i '/CONFIG_FIRMWARE_INCLUDE_HTOP/d' .config
         echo "CONFIG_FIRMWARE_INCLUDE_HTOP=n" >> .config
-        sed -i '/CONFIG_FIRMWARE_INCLUDE_NANO/d' .config
-        echo "CONFIG_FIRMWARE_INCLUDE_NANO=n" >> .config
         sed -i '/CONFIG_FIRMWARE_INCLUDE_IPERF3/d' .config
         echo "CONFIG_FIRMWARE_INCLUDE_IPERF3=n" >> .config
-        sed -i '/CONFIG_FIRMWARE_INCLUDE_MTR/d' .config
-        echo "CONFIG_FIRMWARE_INCLUDE_MTR=n" >> .config
-        sed -i '/CONFIG_FIRMWARE_INCLUDE_SOCAT/d' .config
-        echo "CONFIG_FIRMWARE_INCLUDE_SOCAT=n" >> .config
         sed -i '/CONFIG_FIRMWARE_INCLUDE_SRELAY/d' .config
         echo "CONFIG_FIRMWARE_INCLUDE_SRELAY=n" >> .config
         #########################################################################################
