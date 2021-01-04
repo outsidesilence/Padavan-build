@@ -76,7 +76,7 @@ jobs:
         echo "CONFIG_FIRMWARE_INCLUDE_FRPC=y" >> .config #内网穿透FRPC
         echo "CONFIG_FIRMWARE_INCLUDE_FRPS=n" >> .config #内网穿透FRPS
         echo "CONFIG_FIRMWARE_INCLUDE_TUNSAFE=n" >> .config #VPN客户端
-        echo "CONFIG_FIRMWARE_INCLUDE_ALIDDNS=n" >> .config #阿里DDNS
+        echo "CONFIG_FIRMWARE_INCLUDE_ALIDDNS=y" >> .config #阿里DDNS
         echo "CONFIG_FIRMWARE_INCLUDE_SMARTDNS=y" >> .config #smartdns
         echo "CONFIG_FIRMWARE_INCLUDE_SMARTDNSBIN=y" >> .config #smartdns二进制文件
         echo "CONFIG_FIRMWARE_INCLUDE_V2RAY=n" >> .config #集成v2ray执行文件（3.8M左右)，如果不集成，会从网上下载下来执行，不影响正常使用
@@ -99,19 +99,19 @@ jobs:
         sed -i '/CONFIG_FIRMWARE_INCLUDE_SMBD36/d' .config
         echo "CONFIG_FIRMWARE_INCLUDE_SMBD36=n" >> .config
         sed -i '/CONFIG_FIRMWARE_INCLUDE_EAP_PEAP/d' .config
-        echo "CONFIG_FIRMWARE_INCLUDE_EAP_PEAP=n" >> .config
+        echo "CONFIG_FIRMWARE_INCLUDE_EAP_PEAP=y" >> .config
         sed -i '/CONFIG_FIRMWARE_INCLUDE_SFTP/d' .config
         echo "CONFIG_FIRMWARE_INCLUDE_SFTP=n" >> .config
         sed -i '/CONFIG_FIRMWARE_INCLUDE_XUPNPD/d' .config
-        echo "CONFIG_FIRMWARE_INCLUDE_XUPNPD=n" >> .config
+        echo "CONFIG_FIRMWARE_INCLUDE_XUPNPD=y" >> .config
         sed -i '/CONFIG_FIRMWARE_INCLUDE_DOGCOM/d' .config
         echo "CONFIG_FIRMWARE_INCLUDE_DOGCOM=n" >> .config
         sed -i '/CONFIG_FIRMWARE_INCLUDE_NAPT66/d' .config
-        echo "CONFIG_FIRMWARE_INCLUDE_NAPT66=n" >> .config
+        echo "CONFIG_FIRMWARE_INCLUDE_NAPT66=y" >> .config
         sed -i '/CONFIG_FIRMWARE_INCLUDE_SHADOWSOCKS/d' .config
         echo "CONFIG_FIRMWARE_INCLUDE_SHADOWSOCKS=n" >> .config
         sed -i '/CONFIG_FIRMWARE_INCLUDE_DNSFORWARDER/d' .config
-        echo "CONFIG_FIRMWARE_INCLUDE_DNSFORWARDER=n" >> .config
+        echo "CONFIG_FIRMWARE_INCLUDE_DNSFORWARDER=y" >> .config
         sed -i '/CONFIG_FIRMWARE_INCLUDE_VLMCSD/d' .config
         echo "CONFIG_FIRMWARE_INCLUDE_VLMCSD=n" >> .config
         sed -i '/CONFIG_FIRMWARE_INCLUDE_TTYD/d' .config
