@@ -111,7 +111,7 @@ jobs:
         sed -i '/CONFIG_FIRMWARE_INCLUDE_SHADOWSOCKS/d' .config
         echo "CONFIG_FIRMWARE_INCLUDE_SHADOWSOCKS=n" >> .config
         sed -i '/CONFIG_FIRMWARE_INCLUDE_DNSFORWARDER/d' .config
-        echo "CONFIG_FIRMWARE_INCLUDE_DNSFORWARDER=y" >> .config
+        echo "CONFIG_FIRMWARE_INCLUDE_DNSFORWARDER=n" >> .config
         sed -i '/CONFIG_FIRMWARE_INCLUDE_VLMCSD/d' .config
         echo "CONFIG_FIRMWARE_INCLUDE_VLMCSD=n" >> .config
         sed -i '/CONFIG_FIRMWARE_INCLUDE_TTYD/d' .config
